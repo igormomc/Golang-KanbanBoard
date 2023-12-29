@@ -19,9 +19,13 @@ To install this project, you need to have Go installed on your system. Follow th
 
 1. Clone the repository:
 
-2. Navigate to the project directory:
+2. Navigate to the project directory and run build
+    ```bash
+    go build .
+3. Run it
     ```bash
     go run .
+    
     
 ## Usage
 

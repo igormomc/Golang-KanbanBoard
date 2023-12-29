@@ -26,7 +26,12 @@ To install this project, you need to have Go installed on your system. Follow th
     ```bash
     go run .
     
-    
+
+## Looks
+<img width="1168" alt="Screenshot 2023-12-29 at 22 25 20" src="https://github.com/igormomc/Golang-KanbanBoard/assets/60653284/532a2ba8-c5e6-4ab6-b836-93fdcb752a01">
+
+
+
 ## Usage
 
 Run the application using the following command:

@@ -131,7 +131,23 @@ func (m *Model) MoveToNext() tea.Msg {
 }
 
 func (m *Model) initLists(width, height int) {
-	defaultList := list.New([]list.Item{}, list.NewDefaultDelegate(), width/divisor, height/2)
+	d := list.NewDefaultDelegate()
+
+	// Change colors
+	blue := lipgloss.Color("#2396a6")       // Normal color
+	darkerBlue := lipgloss.Color("#00e3ff") // Selected color
+
+	d.Styles.NormalTitle = d.Styles.NormalTitle.Foreground(blue)
+	d.Styles.NormalDesc = d.Styles.NormalTitle.Copy() // reuse the title style here
+
+	d.Styles.SelectedTitle = d.Styles.SelectedTitle.Foreground(darkerBlue)
+	d.Styles.SelectedDesc = d.Styles.SelectedTitle.Copy() // reuse the title style here
+
+	// Initialize the list model with our delegate
+	defaultList := list.New([]list.Item{}, d, width/divisor, height/2)
+	defaultList.SetShowHelp(false)
+	m.lists = []list.Model{defaultList, defaultList, defaultList}
+
 	defaultList.SetShowHelp(false)
 	m.lists = []list.Model{defaultList, defaultList, defaultList}
 	m.lists[todo].Title = "To Do"

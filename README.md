@@ -5,7 +5,7 @@
 
 ## Introduction
 
-This project is a Kanban board implementation in Go, utilizing the [Bubble Tea](https://github.com/charmbracelet/bubbletea) framework for building modern command-line applications and the [Lip Gloss](https://github.com/charmbracelet/lipgloss) styling library for layout and styling. It's designed to provide a simple and intuitive interface for task management directly from your command line.
+This small project is a Kanban board implementation in Go, utilizing the [Bubble Tea](https://github.com/charmbracelet/bubbletea) framework for building modern command-line applications and the [Lip Gloss](https://github.com/charmbracelet/lipgloss) styling library for layout and styling. It's designed to provide a simple and intuitive interface for task management directly from your command line.
 
 ## Features
 
